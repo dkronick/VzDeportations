@@ -112,7 +112,7 @@ gen totalinterior = interiorremovals0 + interiorremovals2021 ///
 gen pct_TPS23 = interiorremovals2023 / totalinterior
 
 * Also looking at the 2021 decision?
-gen pct_statuslost = interiorremovals2023 / totalinterior if week < wofd(td(7nov2025))
+gen pct_statuslost = interiorremovals2023 / totalinterior if week < 6
 replace pct_statuslost = (interiorremovals2023 + interiorremovals2021) / totalinterior ///
 	        if week >= 6
 
